@@ -14,7 +14,7 @@ const cookieOptions = {
 
 const connectDB = (uri) =>{
     mongoose
-    .connect(uri,{dbNAme:"FUZECHAT"})
+    .connect(uri,{dbName:"Fuze_Chat"})
     .then((data)=>{console.log(`Connected to DB: ${data.connection.host}`)})
     .catch((err)=>{
         throw err;

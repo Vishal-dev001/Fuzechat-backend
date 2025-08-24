@@ -23,8 +23,15 @@ dotenv.config({
 });
 
 const MONGODB_URI = process.env.MONGODB_URI
+
+
+
 const port = process.env.port ||3000
-const envMode = process.env.NODE_ENV.trim() || "PRODUCTION";
+
+console.log(process.env.NODE_ENV );
+const envMode = (process.env.NODE_ENV || "PRODUCTION").trim();
+
+
 
 const userSocketIDs = new Map();
 const onlineUsers = new Set();
